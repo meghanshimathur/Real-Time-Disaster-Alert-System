@@ -1,0 +1,9 @@
+flask
+requests
+pandas
+torch
+transformers
+groq
+python-dotenv
+joblib
+scikit-learn
