@@ -1,4 +1,8 @@
+import os
 
+# API KEYS (IMPORTANT)
+NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")
+NEWSDATA_KEY = os.getenv("NEWSDATA_KEY")
 
 
 # DISASTER DATA SOURCES
