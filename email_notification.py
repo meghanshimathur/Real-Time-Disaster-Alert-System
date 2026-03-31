@@ -2,9 +2,9 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-SENDER_EMAIL = "meghanshi.mathur2002@gmail.com"
-SENDER_PASSWORD = "cyjw mova pfqp dppf"
-RECEIVER_EMAIL = "himanshumehu3@gmail.com"
+SENDER_EMAIL = "your mail"
+SENDER_PASSWORD = "password"
+RECEIVER_EMAIL = "receiver mail"
 
 
 def send_summary_email(alerts):
