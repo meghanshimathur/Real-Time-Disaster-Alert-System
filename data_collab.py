@@ -63,19 +63,19 @@ def fetch_alerts(source):
             "q": "disaster flood earthquake"
         }
         data = requests.get(source["url"], params=params).json()
-        for article in data.get("results", []):
-            alerts.append({
-                "source": source["name"],
-                "title": article.get("title", ""),
-                "location": article.get("country", "")
-            })
 
-    # Static government portals (NDMA, NASA, FEMA)
-    else:
+        for article in data.get("results", []):
+            if isinstance(article, dict):
+                title = article.get("title", "")
+                location = article.get("country", "")
+            else:
+                title = str(article)
+                location = ""
+
         alerts.append({
             "source": source["name"],
-            "title": "Official disaster information available",
-            "location": "Region specific"
+            "title": title,
+            "location": location
         })
 
     return alerts
